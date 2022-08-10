@@ -1,14 +1,19 @@
 import Head from 'next/head'
+import homeText from 'assets/texts/home.json';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Japan 2019</title>
-        <meta name="description" content="Japan" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='Japan' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <h1>{"Let's get started"}</h1>
-    </div>
+      <div className='home'>
+        <h1 className="header">{homeText.header_1} <span className="year">{homeText.header_2}</span></h1>
+      </div>
+    </>
   )
 }
+
+export default Home;
